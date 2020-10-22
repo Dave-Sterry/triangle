@@ -6,11 +6,14 @@ $(document).ready(function() {
     const resutls = (".results");
     
     if (firstSide === secondSide && secondSide === thirdSide && thirdSide === firstSide){
-    
+      $(".results").children().hide();
+      $("#Equilateral").show();
     } else if  (firstSide === secondSide || secondSide === thirdSide || thirdSide === firstSide){ 
-     
+      $(".results").children().hide();
+      $("#Isosceles").show();
     } else if (firstSide !== secondSide && secondSide !== thirdSide && thirdSide !== firstSide ){
-      
+      $(".results").children().hide();
+      $("#Scalene").show();
     }   
      event.preventDefault();
   })
